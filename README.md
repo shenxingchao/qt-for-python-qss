@@ -62,6 +62,7 @@ class="mini"
 class="radio"
 ```
 然后再把QRadioButton放进去
+
 ![calc](./images/qradiobutton.png)  
 
 ## QCheckBox
@@ -70,6 +71,7 @@ class="radio"
 class="checkbox"
 ```
 然后再把QCheckBox放进去
+
 ![calc](./images/qcheckbox.png)  
 
 ## QFormLayout
@@ -84,6 +86,7 @@ class="form"
 class="pagination"
 ```
 里的按钮自己在Qtdesiner里面加，如果要蓝色主题的，设置按钮的class="primary"即可
+
 ![calc](./images/pagination.png)  
 
 ## QTableWidget
