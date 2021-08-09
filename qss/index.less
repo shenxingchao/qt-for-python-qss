@@ -1,0 +1,527 @@
+#centralwidget {
+  border: 1px solid #c6c6c6;
+  background: #ffffff;
+  border-radius: 4px;
+}
+
+/* 下面是公共样式 */
+//主要颜色
+@primary: #1890ff;
+@primary-light: #40a9ff;
+@primary-deep: #096dd9;
+@primary-selected: #e6f7ff;
+//警告颜色
+@warning: #faad14;
+@warning-light: #fcb934;
+@warning-deep: #e09704;
+@warning-selected: #f5e3c0;
+//危险颜色
+@danger: #ff4d4f;
+@danger-light: #fc6e70;
+@danger-deep: #da2629;
+@danger-selected: #f8c5c6;
+//成功颜色
+@success: #52c41a;
+@success-light: #6bcf39;
+@success-deep: #3ba704;
+@success-selected: #d7f3c9;
+
+#centralwidget {
+  /* 标签 */
+  QLabel {
+    color: #333333;
+    font-size: 14px;
+  }
+  QLabel[class="h1"] {
+    color: #333333;
+    font-size: 28px;
+  }
+  QLabel[class="h2"] {
+    color: #333333;
+    font-size: 24px;
+  }
+  QLabel[class="h3"] {
+    color: #333333;
+    font-size: 20px;
+  }
+  QLabel[class="h4"] {
+    color: #555555;
+    font-size: 16px;
+  }
+  QLabel[class="h5"] {
+    color: #777777;
+  }
+
+  /* 默认按钮 */
+  QPushButton {
+    font-size: 14px;
+    background-color: #ffffff;
+    border: 1px solid #d9d9d9;
+    color: #555555;
+    border-radius: 2px;
+    height: 34px;
+    &:hover {
+      border-color: @primary-light;
+      color: @primary-light;
+    }
+    &:pressed {
+      border-color: @primary-deep;
+      color: @primary-deep;
+    }
+    &:disabled {
+      background-color: #f5f5f5;
+      color: #cccccc;
+      border: 1px solid #d9d9d9;
+    }
+    &:checked {
+      background-color: @primary;
+      border: 1px solid @primary;
+      color: #ffffff;
+    }
+  }
+
+  /* 主要按钮 */
+  QPushButton[class="primary"] {
+    background-color: @primary;
+    border-color: @primary;
+    color: #ffffff;
+    &:hover {
+      border-color: @primary-light;
+      background-color: @primary-light;
+    }
+    &:pressed {
+      border-color: @primary-deep;
+      background-color: @primary-deep;
+    }
+    &:checked {
+      border-color: @primary;
+      background: @primary-selected;
+      color: #555555;
+    }
+  }
+
+  /* 警告按钮 */
+  QPushButton[class="warning"] {
+    background-color: @warning;
+    border-color: @warning;
+    color: #ffffff;
+    &:hover {
+      border-color: @warning-light;
+      background-color: @warning-light;
+    }
+    &:pressed {
+      border-color: @warning-deep;
+      background-color: @warning-deep;
+    }
+    &:checked {
+      border-color: @warning;
+      background: @warning-selected;
+      color: #555555;
+    }
+  }
+
+  /* 成功按钮 */
+  QPushButton[class="success"] {
+    background-color: @success;
+    border-color: @success;
+    color: #ffffff;
+    &:hover {
+      border-color: @success-light;
+      background-color: @success-light;
+    }
+    &:pressed {
+      border-color: @success-deep;
+      background-color: @success-deep;
+    }
+    &:checked {
+      border-color: @success;
+      background: @success-selected;
+      color: #555555;
+    }
+  }
+
+  /* 危险按钮 */
+  QPushButton[class="danger"] {
+    background-color: @danger;
+    border-color: @danger;
+    color: #ffffff;
+    &:hover {
+      border-color: @danger-light;
+      background-color: @danger-light;
+    }
+    &:pressed {
+      border-color: @danger-deep;
+      background-color: @danger-deep;
+    }
+    &:checked {
+      border-color: @danger;
+      background: @danger-selected;
+      color: #555555;
+    }
+  }
+
+  /* 按钮尺寸 */
+  //大
+  QPushButton[sizes="large"] {
+    height: 45px;
+  }
+  //小
+  QPushButton[sizes="mini"] {
+    height: 24px;
+  }
+  //圆角按钮
+  QPushButton[shape="circle"] {
+    border-radius: 17px;
+  }
+
+  /* 文本输入框 */
+  QLineEdit {
+    border: 1px solid #d9d9d9;
+    padding: 4px 11px;
+    background: #ffffff;
+    border-radius: 2px;
+    height: 32px;
+    font-size: 14px;
+    &:hover {
+      border-color: @primary-light;
+    }
+    &:focus {
+      border-color: @primary;
+    }
+  }
+
+  /* 多行文本输入框 */
+  QTextEdit {
+    border: 1px solid #d9d9d9;
+    padding: 4px 0 4px 11px;
+    background: #ffffff;
+    border-radius: 2px;
+    font-size: 14px;
+    &:hover {
+      border-color: @primary-light;
+    }
+    &:focus {
+      border-color: @primary;
+    }
+  }
+
+  /* 整型步长输入框,浮点型步长输入框,日期步长输入框 */
+  QSpinBox,
+  QDoubleSpinBox,
+  QDateTimeEdit {
+    border: 1px solid #d9d9d9;
+    padding: 4px 11px;
+    background: #ffffff;
+    border-radius: 2px;
+    height: 32px;
+    font-size: 14px;
+    &:hover {
+      border-color: @primary-light;
+    }
+    &:focus {
+      border-color: @primary;
+    }
+    &::up-button {
+      width: 22px;
+    }
+    &::down-button {
+      width: 22px;
+    }
+  }
+
+  /* 下拉选择框 */
+  QComboBox {
+    border: 1px solid #d9d9d9;
+    padding: 4px 11px;
+    background: #ffffff;
+    border-radius: 2px;
+    height: 32px;
+    font-size: 14px;
+    &:hover {
+      border-color: @primary-light;
+    }
+    &:focus {
+      border-color: @primary;
+    }
+  }
+  //下拉选择框 弹出框
+  QComboBox QAbstractItemView {
+    background: @success-selected;
+  }
+  //下拉选下框 弹出框 每一项的样式
+  QComboBox QAbstractItemView::item {
+    height: 20px;
+    padding: 4px 0;
+  }
+
+  /* 单选按钮 */
+  QWidget[class="radio"] {
+    padding: 4px 11px;
+    height: 32px;
+  }
+  QRadioButton {
+    font-size: 14px;
+  }
+  QRadioButton::indicator {
+    width: 14px;
+    height: 14px;
+  }
+  QRadioButton::indicator:checked {
+    width: 6px;
+    height: 6px;
+    border: 5px solid @primary;
+    border-radius: 8px;
+    background: #ffffff;
+  }
+  QRadioButton::indicator:unchecked {
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+  }
+
+  /* 复选框 */
+  QWidget[class="checkbox"] {
+    padding: 4px 11px;
+    height: 32px;
+  }
+  QCheckBox {
+    font-size: 14px;
+  }
+  QCheckBox::indicator:unchecked {
+    border: 1px solid #bbbbbb;
+  }
+
+  /* 表单布局 */
+  QWidget[class="form"] {
+    QLabel {
+      height: 32px;
+      padding: 4px 0;
+    }
+  }
+
+  /* 表格 */
+  QTableView {
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 2px;
+    selection-background-color: ~"qlineargradient(x1: 0,y1: 0,x2: 0.5,y2: 0.5,stop: 0 #eeeeee,stop: 1 #dddddd)";
+    selection-color: #000000;
+    color: #555555;
+    gridline-color: #eeeeee;
+    font-size: 14px;
+  }
+  //表头
+  QHeaderView {
+    color: #333333;
+    font-size: 14px;
+    border: none;
+    min-height: 36px;
+    background: #fafafa;
+  }
+  //表头内容区域
+  QHeaderView::section {
+    color: #333333;
+    background-color: #fafafa;
+    border-top: 0 solid #cccccc;
+    border-left: 0 solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    selection-background-color: ~"qlineargradient(x1: 0,y1: 0,x2: 0.5,y2: 0.5,stop: 0 #eeeeee,stop: 1 #dddddd)";
+    selection-color: #000000;
+  }
+  //表格左上角
+  QTableView QTableCornerButton::section {
+    background-color: #eeeeee;
+    border-top: 0 solid #cccccc;
+    border-left: 0 solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+  }
+
+  /*tab选项卡*/
+  QTabWidget::pane {
+    border: 1px solid #cccccc; //外边框颜色
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+  }
+  //tab按钮
+  QTabBar::tab {
+    background: #fafafa;
+    border: 1px solid #cccccc;
+    border-radius: 0;
+    border-left: 0 solid #cccccc;
+    &:first {
+      border-left: 1px solid #cccccc;
+      border-top-left-radius: 2px;
+    }
+    &:last {
+      border-top-right-radius: 2px;
+    }
+    padding: 10px 20px;
+  }
+  //选中tab按钮和鼠标移入
+  QTabBar::tab:selected {
+    background: #ffffff;
+    border-bottom: none;
+  }
+  QTabBar::tab:hover {
+    background: #ffffff;
+  }
+  QTabWidget::pane:top {
+    top: -1px; /*pane往上移一个像素，盖住tabbar的下面的线条*/
+  }
+  QTabWidget::pane:bottom {
+    bottom: -1px; /*pane往下移一个像素，盖住tabbar的上面的线条*/
+  }
+  QTabWidget::pane:left {
+    /*这里可能是bug，这里的left对应的其实是east的tabwidget*/
+    right: -1px; /*pane往右移一个像素，盖住tabbar的左面的线条*/
+  }
+  QTabWidget::pane:right {
+    /*这里可能是bug，这里的right对应的其实是west的tabwidget*/
+    left: -1px; /*pane往左移一个像素，盖住tabbar的右面的线条*/
+  }
+
+  /* 滚动区域和滚动条设置Start */
+  QScrollArea {
+    background: transparent;
+    border: none;
+  }
+  QScrollArea > QWidget > QWidget {
+    background: transparent;
+  }
+  QScrollBar::vertical {
+    border-radius: 0; // 滚动条的滑轨的圆角
+    background: #f1f1f1; //滚动条的滑轨的背景颜色
+    padding-top: 14px; //滚动条上部增加padding
+    padding-bottom: 14px; //同理
+  }
+  QScrollBar::handle:vertical {
+    background: #c1c1c1; // 滚动条颜色
+    border-radius: 5px; // 滚动条圆角
+    margin-left: 3px; // 滚动条和滑轨之间的左间隙
+    margin-right: 3px; // 同理
+  }
+  QScrollBar::handle:vertical:hover //鼠标放上滑块滑块变色
+  {
+    background: #b8b8b8;
+    border-radius: 5px;
+  }
+  QScrollBar::add-line:vertical //下方箭头
+  {
+    height: 14px;
+    width: 100%; //设置箭头区域的宽高
+    background-image: url(""); // 箭头图片
+    background: #ececec;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+  }
+  QScrollBar::sub-line:vertical  //上方箭头
+  {
+    height: 14px;
+    width: 100%; //设置箭头区域的宽高
+    background-image: url(""); // 箭头图片
+    background: #ececec;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+  }
+  QScrollBar::add-line:vertical:hover  //鼠标放到下箭头
+  {
+    height: 14px;
+    width: 100%; //设置箭头区域的宽高
+    background-image: url(""); // 箭头图片
+    background: #c1c1c1;
+  }
+  QScrollBar::sub-line:vertical:hover  //鼠标放到上箭头
+  {
+    height: 14px;
+    width: 100%; //设置箭头区域的宽高
+    background-image: url(""); // 箭头图片
+    background: #c1c1c1;
+  }
+  QScrollBar::add-page:vertical  // 滑块已经经过的滑轨区域的颜色，若没有这里的设置，该区域会呈现网格状，不美观
+  {
+    background: #f1f1f1;
+  }
+  QScrollBar::sub-page:vertical  //滑块还没经过的滑轨区域的颜色，若没有这里的设置，该区域会呈现网格状，不美观
+  {
+    background: #f1f1f1;
+  }
+  //水平滚动条
+  QScrollBar::horizontal {
+    border-radius: 0; // 滚动条的滑轨的圆角
+    background: #f1f1f1; //滚动条的滑轨的背景颜色
+    padding-left: 14px; //滚动条左部增加padding
+    padding-right: 14px; //同理
+  }
+  QScrollBar::handle:horizontal {
+    background: #c1c1c1; // 滚动条颜色
+    border-radius: 5px; // 滚动条圆角
+    margin-top: 3px; // 滚动条和滑轨之间的上间隙
+    margin-bottom: 3px; // 同理
+  }
+  QScrollBar::handle:horizontal:hover //鼠标放上滑块滑块变色
+  {
+    background: #b8b8b8;
+    border-radius: 5px;
+  }
+  QScrollBar::add-line:horizontal //右箭头
+  {
+    height: 100%;
+    width: 14px; //设置箭头区域的宽高
+    background-image: url(""); // 箭头图片
+    background: #ececec;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+  }
+  QScrollBar::sub-line:horizontal  //左箭头
+  {
+    height: 100%;
+    width: 14px; //设置箭头区域的宽高
+    background-image: url(""); // 箭头图片
+    background: #ececec;
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+  }
+  QScrollBar::add-line:horizontal:hover  //鼠标放到右箭头
+  {
+    height: 100%;
+    width: 14px; //设置箭头区域的宽高
+    background-image: url(""); // 箭头图片
+    background: #c1c1c1;
+  }
+  QScrollBar::sub-line:horizontal:hover  //鼠标放到左箭头
+  {
+    height: 100%;
+    width: 14px; //设置箭头区域的宽高
+    background-image: url(""); // 箭头图片
+    background: #c1c1c1;
+  }
+  QScrollBar::add-page:horizontal  // 滑块已经经过的滑轨区域的颜色，若没有这里的设置，该区域会呈现网格状，不美观
+  {
+    background: #f1f1f1;
+  }
+  QScrollBar::sub-page:horizontal  //滑块还没经过的滑轨区域的颜色，若没有这里的设置，该区域会呈现网格状，不美观
+  {
+    background: #f1f1f1;
+  }
+
+  /*自定义分页组件*/
+  QWidget[class="pagination"] {
+    QPushButton {
+      padding: 0 10px;
+      color: #777777;
+    }
+    QPushButton[class="primary"] {
+      padding: 0 10px;
+      color: #ffffff;
+    }
+    QLabel {
+      color: #777777;
+    }
+    QLineEdit {
+      width: 36px;
+      height: 26px;
+    }
+  }
+}
