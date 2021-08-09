@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'mainKJXZiV.ui'
+## Form generated from reading UI file 'maingcbrQq.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.1.2
 ##
@@ -44,7 +44,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, -1509, 792, 2086))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 792, 2086))
         sizePolicy1 = QSizePolicy(QSizePolicy.Preferred, QSizePolicy.Preferred)
         sizePolicy1.setHorizontalStretch(1)
         sizePolicy1.setVerticalStretch(0)
@@ -879,9 +879,9 @@ class Ui_MainWindow(object):
         self.label_3.setProperty("class", QCoreApplication.translate("MainWindow", u"h2", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"\u4e09\u7ea7\u6807\u9898H3  class=h3", None))
         self.label_4.setProperty("class", QCoreApplication.translate("MainWindow", u"h3", None))
-        self.label_5.setText(QCoreApplication.translate("MainWindow", u"\u4e09\u7ea7\u6807\u9898H4  class=h4", None))
+        self.label_5.setText(QCoreApplication.translate("MainWindow", u"\u56db\u7ea7\u6807\u9898H4  class=h4", None))
         self.label_5.setProperty("class", QCoreApplication.translate("MainWindow", u"h4", None))
-        self.label_6.setText(QCoreApplication.translate("MainWindow", u"\u4e09\u7ea7\u6807\u9898H5  class=h5", None))
+        self.label_6.setText(QCoreApplication.translate("MainWindow", u"\u4e94\u7ea7\u6807\u9898H5  class=h5", None))
         self.label_6.setProperty("class", QCoreApplication.translate("MainWindow", u"h5", None))
         self.label_7.setText(QCoreApplication.translate("MainWindow", u"\u9ed8\u8ba4\u6807\u7b7e\u6587\u5b57", None))
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"\u6309\u94ae QPushButton", None))
